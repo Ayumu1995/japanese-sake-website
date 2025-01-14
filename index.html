@@ -3,46 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tailwind CSS Example</title>
+    <title>Sake</title>
     <link href="./dist/output.css" rel="stylesheet" />
-    <!-- <link href="./styles/main.css" rel="stylesheet" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tsukimi+Rounded&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/5494693291.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="w-auto h-dvh bg-[url('../assets/__loop.jpg')] bg-repeat-x animate-scroll"></div>
     <header class="fixed top-0 w-full text-slate-200">
-      <nav class="w-full flex justify-between p-7">
-        <p class="w-[80px] text-xxs/4 text-slate-200">
+      <nav class="w-full flex justify-between p-3 tablet:p-7">
+        <!-- contents for mobile -->
+        <p class="tablet:hidden w-[80px] text-sm text-slate-200 font-tsukimi">Sake</p>
+
+        <div class="tablet:hidden flex-col justify-items-center">
+          <i class="fa-solid fa-bars mx-auto" style="color: #d2d8e1"></i>
+          <p class="text-xxs">menu</p>
+        </div>
+
+        <!-- contents for tablet and desktop -->
+        <p class="hidden tablet:block w-[80px] text-xxs/4 text-slate-200">
           Learning Platform Of Japanese Sake and Breweries For Sake Likers.
         </p>
-        <div class="flex justify-between absolute left-[40%]">
+        <div class="hidden tablet:flex justify-between absolute left-[40%]">
           <div class="flex justify-start me-20">
             <h2>
-              <a href="#" class="px-2 writing-vertical text-slate-200 text-sm font-light"
+              <a href="#" class="px-2 writing-vertical text-slate-200 text-base font-light"
                 >Overview</a
               >
             </h2>
             <h2>
-              <a href="#" class="px-2 writing-vertical text-slate-200 text-sm font-light"
+              <a href="#" class="px-2 writing-vertical text-slate-200 text-base font-light"
                 >Tasting Event</a
               >
             </h2>
             <h2>
-              <a href="#" class="px-2 writing-vertical text-slate-200 text-sm font-light"
+              <a href="#" class="px-2 writing-vertical text-slate-200 text-base font-light"
                 >Pairing</a
               >
             </h2>
             <h2>
-              <a href="#" class="px-2 writing-vertical text-slate-200 text-sm font-light"
+              <a href="#" class="px-2 writing-vertical text-slate-200 text-base font-light"
                 >Breweries</a
               >
             </h2>
             <h2>
-              <a href="#" class="px-2 writing-vertical text-slate-200 text-sm font-light">Cover</a>
+              <a href="#" class="px-2 writing-vertical text-slate-200 text-base font-light"
+                >Cover</a
+              >
             </h2>
           </div>
           <h3 class="writing-vertical text-slate-200 font-light">Contents</h3>
         </div>
-        <div class="flex justify-between">
+        <div class="hidden tablet:flex justify-between">
           <p class="w-[110px] text-xxs/3 me-10 text-slate-200">
             Join us on a journey of discovery of Japanese Sake with us <br />
             info japanesesake.brew

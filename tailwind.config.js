@@ -2,14 +2,25 @@
 module.exports = {
   content: ["./*.{html,js}"],
   theme: {
+    screens: {
+      mobile: "480px", // new mobile breakpoint
+      tablet: "820px", // for tablet
+      desktop: "1024px", // for desktop
+    },
+
     extend: {
       fontSize: {
         xxs: "8px",
       },
 
+      fontFamily: {
+        tsukimi: ["Tsukimi Rounded", "sans-serif"], // Google Fonts
+      },
+
       animation: {
         scroll: "bgscroll 300s linear infinite",
       },
+
       keyframes: {
         bgscroll: {
           "0%": { backgroundPosition: "0 0" },
