@@ -1,0 +1,6 @@
+.scroll-img {
+  background-image: url(../aseets/__loop.jpg);
+  background-size: auto 100vh;
+  animation: bgscroll 3s linear infinite;
+  height: 100vh;
+}
