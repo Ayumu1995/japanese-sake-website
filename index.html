@@ -15,13 +15,15 @@
   </head>
   <body>
     <div class="w-auto h-dvh bg-[url('../assets/__loop.jpg')] bg-cover bg-repeat-x animate-scroll">
-      <div class="w-full h-full flex flex-col justify-center items-center gap-16">
-        <h1 class="w-52 tablet:w-60 font-thin text-3xl/relaxed text-slate-200">
+      <div
+        class="w-full h-full flex flex-col justify-center items-center gap-16 text-slate-200-parent"
+      >
+        <h1 class="w-52 tablet:w-60 font-thin text-3xl/relaxed">
           That time,<br />
           That moment, <br />
           The taste of time
         </h1>
-        <a href="#" class="w-52 tablet:w-60 flex gap-3 text-slate-200 font-tsukimi"
+        <a href="#" class="w-52 tablet:w-60 flex gap-3 font-tsukimi"
           >more
           <img src="./assets/arrow-circle-r 2.svg" alt="arrow-to-other-page" class="w-5 pt-1" />
         </a>
@@ -41,35 +43,28 @@
           Learning Platform Of Japanese Sake and Breweries For Sake Likers.
         </p>
         <div class="hidden tablet:flex justify-between absolute left-[40%]">
-          <div class="flex justify-start me-20">
+          <div
+            class="flex justify-start me-20 ancestor [&>h2>a]:px-2 [&>h2>a]:writing-vertical [&>h2>a]:text-slate-200 [&>h2>a]:text-base [&>h2>a]:font-light"
+          >
             <h2>
-              <a href="#" class="px-2 writing-vertical text-slate-200 text-base font-light"
-                >Overview</a
-              >
+              <a href="#">Overview</a>
             </h2>
             <h2>
-              <a href="#" class="px-2 writing-vertical text-slate-200 text-base font-light"
-                >Tasting Event</a
-              >
+              <a href="#">Tasting Event</a>
             </h2>
             <h2>
-              <a href="#" class="px-2 writing-vertical text-slate-200 text-base font-light"
-                >Pairing</a
-              >
+              <a href="#">Pairing</a>
             </h2>
             <h2>
-              <a href="#" class="px-2 writing-vertical text-slate-200 text-base font-light"
-                >Breweries</a
-              >
+              <a href="#">Breweries</a>
             </h2>
             <h2>
-              <a href="#" class="px-2 writing-vertical text-slate-200 text-base font-light"
-                >Cover</a
-              >
+              <a href="#">Cover</a>
             </h2>
           </div>
           <h3 class="writing-vertical text-slate-200 font-light">Contents</h3>
         </div>
+
         <div class="hidden tablet:flex justify-between">
           <p class="w-[110px] text-xxs/3 me-10 text-slate-200">
             Join us on a journey of discovery of Japanese Sake with us <br />
