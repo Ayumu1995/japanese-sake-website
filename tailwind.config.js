@@ -42,5 +42,14 @@ module.exports = {
       };
       addUtilities(newUtilities, ["responsive"]);
     },
+    function ({ addUtilities }) {
+      const newUtilities = {
+        ".gallery-item": {
+          borderRadius: "10px",
+          boxShadow: "0 4px 10px rgba(0, 0, 0, 0.15)",
+        },
+      };
+      addUtilities(newUtilities, ["responsive"]);
+    },
   ],
 };

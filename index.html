@@ -70,7 +70,7 @@
             Join us on a journey of discovery of Japanese Sake with us <br />
             info japanesesake.brew
           </p>
-          <p class="writing-vertical">Member</p>
+          <a href="./pages/form.html" class="writing-vertical">Member</a>
         </div>
       </nav>
     </header>
@@ -147,16 +147,19 @@
 
         <!-- third article -->
         <div class="px-12 pt-16 desktop:flex justify-center gap-36">
-          <img
-            src="./assets/beaumont-yun-ILE36sjLrEQ-unsplash.jpg"
-            alt="breweries"
-            class="w-full desktop:w-[600px] desktop:hidden"
-          />
-          <img
-            src="./assets/unsplash_group.png"
-            alt="breweries"
-            class="w-full desktop:w-[600px] mobile:hidden desktop:block"
-          />
+          <picture>
+            <source
+              media="(min-width: 1024px)"
+              srcset="./assets/unsplash_group.png"
+              alt="wood-breweries"
+            />
+            <img
+              src="./assets/beaumont-yun-ILE36sjLrEQ-unsplash.jpg"
+              alt="drum-breweries"
+              class="w-full desktop:w-[600px]"
+            />
+          </picture>
+
           <div class="desktop:w-[350px] desktop:flex flex-col justify-center">
             <h4 class="py-6 text-xl text-sky-950 font-tsukimi">Exploring Sake Breweries</h4>
             <p class="text-lg text-gray-700">
@@ -279,13 +282,41 @@
           </div>
         </div>
       </section>
+
+      <section>
+        <h4 class="text-center text-2xl text-gray-600 mt-32 mb-12">Sake Gallery</h4>
+        <div
+          class="grid grid-cols-2 grid-rows-6 tablet:grid-cols-3 tablet:grid-rows-4 desktop:grid-cols-4 desktop:grid-rows-3 gap-x-10 gap-y-4 justify-around -z-10 mobile:px-10 tablet:px-20 desktop:px-32 min-w-full min-h-full"
+        >
+          <img src="../assets/sake1.jpg" class="gallery-item" />
+          <img src="../assets/sake2.jpg" class="gallery-item" />
+          <img src="../assets/sake3.jpg" class="gallery-item" />
+          <img src="../assets/sake4.jpg" class="gallery-item" />
+          <img src="../assets/sake5.jpg" class="gallery-item" />
+          <img src="../assets/sake6.jpg" class="gallery-item" />
+          <img src="../assets/sake7.jpg" class="gallery-item" />
+          <img src="../assets/sake8.jpg" class="gallery-item" />
+          <img src="../assets/sake9.jpg" class="gallery-item" />
+          <img src="../assets/sake10.jpg" class="gallery-item" />
+          <img src="../assets/sake11.jpg" class="gallery-item" />
+          <img src="../assets/sake12.jpg" class="gallery-item" />
+        </div>
+        <div class="my-20">
+          <a
+            href="#"
+            class="w-52 mx-auto tablet:w-60 flex justify-center gap-3 text-gray-700 font-tsukimi"
+            >view all
+            <img src="./assets/arrow-circle-r.svg" alt="arrow-to-other-page" class="w-5 pt-1" />
+          </a>
+        </div>
+      </section>
     </main>
 
     <footer class="bg-white shadow dark:bg-gray-800">
       <div class="w-full mx-auto max-w-screen-xl p-4 flex justify-between">
         <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
-          >© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights
-          Reserved.
+          >© 2025 <a href="https://flowbite.com/" class="hover:underline">Japanese Sake</a>. All
+          Rights Reserved.
         </span>
         <ul
           class="flex flex-wrap items-start text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0"
