@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .text-slate-200-parent > h1,
+  .text-slate-200-parent > a {
+    @apply text-slate-200;
+  }
+}
