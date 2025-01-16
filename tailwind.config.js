@@ -17,6 +17,7 @@ module.exports = {
         darkbackground: "#0f1014",
         lightbackground: "#ffffff",
       },
+
       fontFamily: {
         tsukimi: ["Tsukimi Rounded", "sans-serif"], // Google Fonts
       },
