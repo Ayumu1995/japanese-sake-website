@@ -4,13 +4,84 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sake</title>
-    <link href="./dist/output.css" rel="stylesheet" />
+    <!-- <link href="./dist/output.css" rel="stylesheet" /> -->
+    <link href="./input.css" rel="stylesheet" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Tsukimi+Rounded&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            mobile: "480px", // new mobile breakpoint
+            tablet: "820px", // for tablet
+            desktop: "1024px", // for desktop
+          },
+
+          extend: {
+            colors: {
+              darkbackground: "#0f1014",
+              lightbackground: "#ffffff",
+            },
+
+            fontSize: {
+              xxs: "8px",
+            },
+            fontFamily: {
+              tsukimi: ["Tsukimi Rounded", "sans-serif"], // Google Fonts
+            },
+
+            animation: {
+              scroll: "bgscroll 300s linear infinite",
+            },
+
+            keyframes: {
+              bgscroll: {
+                "0%": { backgroundPosition: "0 0" },
+                "100%": { backgroundPosition: "-200% 0" },
+              },
+            },
+          },
+        },
+        plugins: [
+          function ({ addUtilities }) {
+            const newUtilities = {
+              ".writing-vertical": {
+                writingMode: "vertical-rl",
+              },
+            };
+            addUtilities(newUtilities, ["responsive"]);
+          },
+          function ({ addUtilities }) {
+            const newUtilities = {
+              ".gallery-item": {
+                borderRadius: "10px",
+                boxShadow: "0 4px 10px rgba(0, 0, 0, 0.15)",
+              },
+            };
+            addUtilities(newUtilities, ["responsive"]);
+          },
+        ],
+      };
+    </script>
+    <style>
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
+
+      @layer utilities {
+        .text-slate-200-parent > h1,
+        .text-slate-200-parent > a {
+          @apply text-slate-200;
+        }
+      }
+    </style>
+
     <script src="https://kit.fontawesome.com/5494693291.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -23,12 +94,12 @@
       <div
         class="w-full h-full flex flex-col justify-center items-center gap-16 text-slate-200-parent"
       >
-        <h1 class="w-52 tablet:w-60 font-thin text-3xl/relaxed">
+        <h1 class="w-52 tablet:w-60 font-thin text-3xl/relaxed text-slate-200">
           That time,<br />
           That moment, <br />
           The taste of time
         </h1>
-        <a href="#" class="w-52 tablet:w-60 flex gap-3 font-tsukimi"
+        <a href="#" class="w-52 tablet:w-60 flex gap-3 font-tsukimi text-slate-200"
           >more
           <img src="./assets/arrow-circle-r-2.svg" alt="arrow-to-other-page" class="w-5 pt-1" />
         </a>
